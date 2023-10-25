@@ -19,13 +19,13 @@ Host hostname
 Copy script to server:
 
 ```powershell
-scp deploy.sh certbot.sh nginx-site hostname:~
+scp deploy.sh certbot.sh user.sh nginx-site hostname:~
 ```
 
 ## Server
 
 ```bash
-chmod +x ./deploy.sh && chmod +x ./certbot.sh
+chmod +x ./deploy.sh && chmod +x ./certbot.sh && chmod +x ./user.sh
 ```
 
 - Create deploy user and install docker, nginx:
