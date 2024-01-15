@@ -9,5 +9,4 @@ echo $SSH_PUBLIC_KEY | sudo dd of=/home/$USERNAME/.ssh/authorized_keys
 sudo chown -R $USERNAME:$USERNAME /home/$USERNAME/.ssh
 sudo chmod 700 /home/$USERNAME/.ssh
 sudo chmod 600 /home/$USERNAME/.ssh/authorized_keys
-
-EDITOR=nano visudo
+echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/sudoers
